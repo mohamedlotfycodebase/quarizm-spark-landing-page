@@ -15,17 +15,14 @@ const Hero = () => {
       
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          {/* Logo and Brand */}
+          {/* Logo only */}
           <div className="mb-8 animate-fade-in">
-            <div className="flex justify-center items-center mb-6 gap-4">
+            <div className="flex justify-center items-center mb-6">
               <img 
                 src="/lovable-uploads/1ebfb8ea-0af4-4ff2-9f3f-402273683ab5.png" 
                 alt="كوارزم"
                 className="h-16 lg:h-20 object-contain"
               />
-              <h1 className="text-4xl lg:text-6xl font-bold text-white">
-                كوارزم
-              </h1>
             </div>
             <p className="text-xl text-purple-200 mt-2 font-light">منصة التجارة الإلكترونية الذكية</p>
           </div>

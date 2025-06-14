@@ -10,6 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import DiscountPopup from "@/components/DiscountPopup";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       <CTA />
       <Footer />
       <DiscountPopup />
+      <WhatsAppFloat />
     </div>
   );
 };
