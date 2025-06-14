@@ -15,14 +15,17 @@ const Hero = () => {
       
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          {/* Logo/Brand */}
+          {/* Logo and Brand */}
           <div className="mb-8 animate-fade-in">
-            <div className="flex justify-center items-center mb-6">
+            <div className="flex justify-center items-center mb-6 gap-4">
               <img 
-                src="/lovable-uploads/59a2afc2-7a5c-41d1-8ee1-9772690d7998.png" 
+                src="/lovable-uploads/1ebfb8ea-0af4-4ff2-9f3f-402273683ab5.png" 
                 alt="كوارزم"
-                className="h-20 lg:h-24 object-contain"
+                className="h-16 lg:h-20 object-contain"
               />
+              <h1 className="text-4xl lg:text-6xl font-bold text-white">
+                كوارزم
+              </h1>
             </div>
             <p className="text-xl text-purple-200 mt-2 font-light">منصة التجارة الإلكترونية الذكية</p>
           </div>
@@ -82,7 +85,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
-              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open(whatsappLink, '_blank')}
             >
               اكتشف كيف نساعدك أكثر
             </Button>
@@ -94,4 +97,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

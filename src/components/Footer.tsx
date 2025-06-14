@@ -2,6 +2,9 @@
 import { Heart } from "lucide-react";
 
 const Footer = () => {
+  const whatsappNumber = "+966538859677";
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace('+', '')}`;
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -14,12 +17,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 gap-3">
               <img 
-                src="/lovable-uploads/59a2afc2-7a5c-41d1-8ee1-9772690d7998.png" 
+                src="/lovable-uploads/1ebfb8ea-0af4-4ff2-9f3f-402273683ab5.png" 
                 alt="كوارزم"
-                className="h-8 ml-2"
+                className="h-8 object-contain"
               />
+              <span className="text-xl font-bold text-white">كوارزم</span>
             </div>
             <p className="text-gray-300 max-w-md leading-relaxed">
               نساعدك في بناء متجرك الإلكتروني الاحترافي خلال 72 ساعة فقط. 
@@ -32,6 +36,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li><button onClick={() => scrollToSection('features')} className="hover:text-purple-400 transition-colors text-right">المميزات</button></li>
               <li><button onClick={() => scrollToSection('benefits')} className="hover:text-purple-400 transition-colors text-right">الفوائد</button></li>
+              <li><button onClick={() => scrollToSection('comparison')} className="hover:text-purple-400 transition-colors text-right">المقارنة</button></li>
               <li><button onClick={() => scrollToSection('who-needs-us')} className="hover:text-purple-400 transition-colors text-right">من يحتاجنا</button></li>
               <li><button onClick={() => scrollToSection('testimonials')} className="hover:text-purple-400 transition-colors text-right">آراء العملاء</button></li>
             </ul>
@@ -42,7 +47,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li><button onClick={() => scrollToSection('why-choose-us')} className="hover:text-purple-400 transition-colors text-right">لماذا كوارزم</button></li>
               <li><button onClick={() => scrollToSection('what-makes-different')} className="hover:text-purple-400 transition-colors text-right">ما يميزنا</button></li>
-              <li><button onClick={() => scrollToSection('cta')} className="hover:text-purple-400 transition-colors text-right">تواصل معنا</button></li>
+              <li><button onClick={() => window.open(whatsappLink, '_blank')} className="hover:text-purple-400 transition-colors text-right">تواصل معنا</button></li>
               <li><a href="#" className="hover:text-purple-400 transition-colors">سياسة الخصوصية</a></li>
             </ul>
           </div>
@@ -62,4 +67,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
