@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Zap, Users, Trophy } from "lucide-react";
 
 const Hero = () => {
+  const whatsappNumber = "+966538859677";
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace('+', '')}`;
+
   return (
     <section className="relative overflow-hidden px-6 py-20 lg:py-32" dir="rtl">
       {/* Background Elements */}
@@ -14,15 +17,19 @@ const Hero = () => {
         <div className="text-center">
           {/* Logo/Brand */}
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-6xl lg:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              كوارزم
-            </h1>
+            <div className="flex justify-center items-center mb-6">
+              <img 
+                src="/lovable-uploads/59a2afc2-7a5c-41d1-8ee1-9772690d7998.png" 
+                alt="كوارزم"
+                className="h-20 lg:h-24 object-contain"
+              />
+            </div>
             <p className="text-xl text-purple-200 mt-2 font-light">منصة التجارة الإلكترونية الذكية</p>
           </div>
 
           {/* Main Headline */}
           <div className="mb-12 animate-fade-in delay-200">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               مستعد تكسر حاجز المبيعات؟
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -32,7 +39,7 @@ const Hero = () => {
               هل تعبت من القيود اللي تفرضها عليك منصات مثل سلة و زد؟ هل كنت تفكر تبدأ من الصفر وتواجه صعوبة في البداية؟
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              مع كوارزم، نقدم لك متجر جاهز، تصميم مميز، ودعم مستمر خلال 48 ساعة فقط. جرب الديمو وتأكد من جودة المتجر قبل ما تبدأ..
+              مع كوارزم، نقدم لك متجر جاهز، تصميم مميز، ودعم مستمر خلال 72 ساعة فقط. جرب الديمو وتأكد من جودة المتجر قبل ما تبدأ..
             </p>
           </div>
 
@@ -49,7 +56,7 @@ const Hero = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/20 rounded-full mb-4">
                 <Zap className="w-8 h-8 text-blue-400" />
               </div>
-              <div className="text-3xl font-bold text-white">48</div>
+              <div className="text-3xl font-bold text-white">72</div>
               <div className="text-gray-400">ساعة للتسليم</div>
             </div>
             <div className="text-center">
@@ -63,11 +70,20 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-500">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={() => window.open(whatsappLink, '_blank')}
+            >
               طلب متجرك الآن وادفع أونلاين
               <ArrowLeft className="mr-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300"
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               اكتشف كيف نساعدك أكثر
             </Button>
           </div>
@@ -78,3 +94,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

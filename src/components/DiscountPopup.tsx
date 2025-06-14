@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const DiscountPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const whatsappNumber = "+966538859677";
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace('+', '')}`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,7 +39,10 @@ const DiscountPopup = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 text-lg font-semibold rounded-full w-full"
-              onClick={() => setIsVisible(false)}
+              onClick={() => {
+                window.open(whatsappLink, '_blank');
+                setIsVisible(false);
+              }}
             >
               احصل على الخصم الآن!
             </Button>
@@ -56,3 +61,4 @@ const DiscountPopup = () => {
 };
 
 export default DiscountPopup;
+

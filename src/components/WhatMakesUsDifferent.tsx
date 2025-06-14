@@ -5,8 +5,8 @@ const WhatMakesUsDifferent = () => {
   const features = [
     {
       icon: Clock,
-      title: "تصميم جاهز في 48 ساعة",
-      description: "متجرك الجاهز خلال يومين، تقدر تبدأ فيه بيع منتجاتك بدون تأخير."
+      title: "تصميم جاهز في 72 ساعة",
+      description: "متجرك الجاهز خلال ثلاثة أيام، تقدر تبدأ فيه بيع منتجاتك بدون تأخير."
     },
     {
       icon: CreditCard,
@@ -21,7 +21,7 @@ const WhatMakesUsDifferent = () => {
   ];
 
   return (
-    <section className="py-20 px-6 relative" dir="rtl">
+    <section className="py-20 px-6 relative" dir="rtl" id="what-makes-different">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -48,3 +48,4 @@ const WhatMakesUsDifferent = () => {
 };
 
 export default WhatMakesUsDifferent;
+

@@ -26,7 +26,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-20 px-6 relative" dir="rtl">
+    <section className="py-20 px-6 relative" dir="rtl" id="benefits">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
@@ -61,3 +61,4 @@ const Benefits = () => {
 };
 
 export default Benefits;
+

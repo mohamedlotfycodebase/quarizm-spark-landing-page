@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Store, Building, Rocket, ArrowLeft } from "lucide-react";
 
 const WhoNeedsUs = () => {
+  const whatsappNumber = "+966538859677";
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace('+', '')}`;
+
   const targetAudience = [
     {
       icon: Store,
@@ -22,7 +25,7 @@ const WhoNeedsUs = () => {
   ];
 
   return (
-    <section className="py-20 px-6 relative" dir="rtl">
+    <section className="py-20 px-6 relative" dir="rtl" id="who-needs-us">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -52,11 +55,20 @@ const WhoNeedsUs = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-lg font-semibold rounded-full">
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-lg font-semibold rounded-full"
+            onClick={() => window.open(whatsappLink, '_blank')}
+          >
             كلمنا على واتساب!
             <ArrowLeft className="mr-2 w-5 h-5" />
           </Button>
-          <Button size="lg" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 text-lg font-semibold rounded-full">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 text-lg font-semibold rounded-full"
+            onClick={() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             اكتشف كيف ترفع مبيعاتك
           </Button>
         </div>
@@ -66,3 +78,4 @@ const WhoNeedsUs = () => {
 };
 
 export default WhoNeedsUs;
+
